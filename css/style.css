@@ -97,13 +97,13 @@ header {
 }
 .slider-img-wrapper img {
   height: 600px;
-  width: 1600px;
+  width: 100%;
 }
 .slider-img-wrapper::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 600px;
+  height: 100%;
   background-color: rgba(0, 0, 2, 0.5);
 }
 .slider-button-wrapper button {
@@ -154,6 +154,7 @@ header {
   font-weight: 900;
   line-height: 82px;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 .slider-description {
   margin: 0;
@@ -281,7 +282,6 @@ header {
   color: #ffffff;
   height: 50px;
   border: 1px solid #ffffff;
-  background-color: transparent;
 }
 
 .overlay-list-button-item button:hover {
@@ -298,12 +298,14 @@ header {
   width: 50px;
   margin-bottom: 8px;
   margin-right: 8px;
+  background-color: transparent;
 }
 .button-remind {
   margin-right: 0px;
 }
 .button-cart {
   width: 166px;
+  background-color: #323232;
 }
 .cart {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -315,11 +317,12 @@ header {
 /* FOOTER */
 footer {
   padding: 34px 0px;
+  width: 100%;
   background-color: #323232;
 }
 footer div {
   font-size: 0;
-  margin: 0 auto;
+  text-align: center;
 }
 .copyright,
 .design,
