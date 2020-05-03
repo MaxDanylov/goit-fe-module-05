@@ -26,6 +26,9 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+button {
+  outline: none;
+}
 /* HEADER */
 
 header {
@@ -160,6 +163,7 @@ header {
   line-height: 54px;
   letter-spacing: -0.02em;
 }
+/* SHOP */
 .new-collection {
   padding: 90px 0px 100px;
   background-color: #e9f0fd;
@@ -198,7 +202,7 @@ header {
 }
 
 .new-collection-list-item {
-  /* position: relative; */
+  position: relative;
   float: left;
   width: 255px;
 }
@@ -209,10 +213,14 @@ header {
 .new-collection-list-item:hover .new-collection-list-item-description {
   background-color: #1abc9c;
 }
+.new-collection-list-item:hover .overlay {
+  opacity: 1;
+}
 .new-collection-list-item-head,
 .new-collection-list-item-price {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
@@ -235,6 +243,7 @@ header {
 .new-collection-list-item-price {
   display: inline-block;
   width: 55px;
+  height: 100%;
   font-size: 18px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.44);
@@ -244,8 +253,8 @@ header {
 }
 /* OVERLAY */
 .overlay {
-  float: right;
-  /* position: absolute; */
+  position: absolute;
+  opacity: 0;
   top: 0px;
   margin: 0;
   padding-top: 80px;
@@ -271,8 +280,17 @@ header {
   font-weight: 400;
   color: #ffffff;
   height: 50px;
-  border: 1px colid #ffffff;
+  border: 1px solid #ffffff;
   background-color: transparent;
+}
+
+.overlay-list-button-item button:hover {
+  border: none;
+  background-color: #1abc9c;
+}
+.overlay-list-button-item button:focus {
+  border: none;
+  background-color: #1abc9c;
 }
 .button-favorites,
 .button-compare,
